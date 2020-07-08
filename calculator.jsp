@@ -22,5 +22,17 @@
     </script>
     </head>
 <body>
+<form name="form1" action = "myResult.jsp" >
+    请输入第一个数：<input type = "text" name = "num1"><br>
+    <select name="flag">
+        <option value=+>+</option>
+        <option value=->-</option>
+        <option value=*>*</option>
+        <option value=/>/</option>
+    </select><br>
+    请输入第二个数：<input type="text" name = "num2"><br>
+    <input type = "submit" value = "计算" οnclick="return onClickCheck();">
+</form><br>
+<hr>
 </body>
 </html>
