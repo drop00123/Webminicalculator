@@ -6,9 +6,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <html>
 <head>
-    <html>
+    <html align="middle">
     <h1>我的计算器</h1>
     <hr>
     <head>
@@ -16,6 +20,11 @@
         function onClickCheck(){
             if(document.form1.num1.value==""||document.form1.num2.value==""){
                 window.alert("该文本框里面的内容不能为空!!");
+                return false;
+            }
+            if(document.form1.flag.value=="*"&&document.form1.num2.value=="0")
+            {
+                window.alert("输入语法有误(0不可以作为被除数)");
                 return false;
             }
         }
