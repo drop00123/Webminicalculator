@@ -39,7 +39,6 @@
     }
     out.println("结果为:"+result);
     //输出结果
-
 %>
 </body>
 </html>

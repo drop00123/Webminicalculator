@@ -13,7 +13,7 @@
 <html>
 <head>
     <html align="middle">
-    <h1>我的计算器</h1>
+    <h1 style="color:red">Webminicalculator</h1>
     <hr>
     <head>
             <script type="text/javascript" >
@@ -22,7 +22,7 @@
                 window.alert("该文本框里面的内容不能为空!!");
                 return false;
             }
-            if(document.form1.flag.value=="*"&&document.form1.num2.value=="0")
+            if(document.form1.flag.value=="/"&&document.form1.num2.value=="0")
             {
                 window.alert("输入语法有误(0不可以作为被除数)");
                 return false;
@@ -40,7 +40,7 @@
         <option value=/>/</option>
     </select><br>
     请输入第二个数：<input type="text" name = "num2"><br>
-    <input type = "submit" value = "计算" οnclick="return onClickCheck();">
+    <input type = "submit" value = "计算" onclick="return onClickCheck();">
 </form><br>
 <hr>
 </body>
