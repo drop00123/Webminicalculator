@@ -10,6 +10,12 @@
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%
+    String a=request.getParameter("param");
+%>
+<%
+    out.print("你好"+a);
+%>
 <html>
 <head>
     <html align="middle">
@@ -25,6 +31,11 @@
             if(document.form1.flag.value=="/"&&document.form1.num2.value=="0")
             {
                 window.alert("输入语法有误(0不可以作为被除数)");
+                return false;
+            }
+            if(document.form1.num1.value!="\d"||document.form1.num2.value!="\d")
+            {
+                window.alert("请输入数字(0-9)");
                 return false;
             }
         }
