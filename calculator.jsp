@@ -19,8 +19,7 @@
 <html>
 <head>
     <html align="middle">
-    <h1 style="color:red">Webminicalculator</h1>
-    <hr>
+    <h1 style="color:red">Welcome To Webminicalculator</h1>
     <head>
             <script type="text/javascript" >
         function onClickCheck(){
@@ -33,15 +32,16 @@
                 window.alert("输入语法有误(0不可以作为被除数)");
                 return false;
             }
-            if(document.form1.num1.value!="\d"||document.form1.num2.value!="\d")
+            if(document.form1.num1.value=="\\d"||document.form1.num2.value=="\\d")
             {
-                window.alert("请输入数字(0-9)");
+                window.alert("请输入数字");
                 return false;
             }
         }
     </script>
     </head>
-<body>
+<body bgcolor="#00fa9a">
+
 <form name="form1" action = "myResult.jsp" >
     请输入第一个数：<input type = "text" name = "num1"><br>
     <select name="flag">

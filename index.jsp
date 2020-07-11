@@ -10,22 +10,23 @@
   <head>
         <title>Welcome to here</title>
       </head>
-  <body>
-     <div>
-         <%
-             Integer hit=(Integer)application.getAttribute("hit");
-             if(hit==null||hit==0)
-             {
-                 out.println("欢迎访问");
-                 hit=1;
-             }
-             else
-             {
-                 out.println("欢迎再次访问");
-             }
-         %>
-             <p>访问量为：<%=hit%></p>
-     </div>
+  <body bgcolor="aqua">
+<font color="black">
+<% Integer hit=
+        (Integer)application.getAttribute("hit");
+    if(hit==null||hit==0)
+    {
+        out.print("欢迎访问这个页面");
+        hit=1;
+    }
+    else
+    {
+        out.print("欢迎再次访问这个页面");
+        hit++;
+    }
+    application.setAttribute("hit",hit);
+
+%><p>当前网页访问量为：<%=hit%></p></font>
     <div align="middle">
     <form action="calculator" method="post" name=form>
          <font size="10" style="color:blue">网页计算器登录界面</font><br>

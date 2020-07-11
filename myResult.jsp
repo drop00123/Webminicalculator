@@ -12,6 +12,7 @@
 %>
 <html>
 <body>
+<font size="100"color="#ff4500"face="楷体">
 <%
     //接受第一个数
     String num1_get = request.getParameter("num1");
@@ -37,8 +38,8 @@
     else{
         result=num1/num2;
     }
-    out.println("结果为:"+result);
+    out.println("计算结果为:"+num1+flag+num2+"="+result);
     //输出结果
-%>
+%></font>
 </body>
 </html>
