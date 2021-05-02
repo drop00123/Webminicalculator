@@ -11,30 +11,33 @@
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <%
-    String a=request.getParameter("param");
-%>
-<%
-    out.print("你好"+a);
+    String a=request.getParameter("username");
+    out.println("你好:"+a);
 %>
 <html>
 <head>
     <html align="middle">
     <h1 style="color:red">Welcome To Webminicalculator</h1>
     <head>
-            <script type="text/javascript" >
+       <script type="text/javascript" >
         function onClickCheck(){
+            var a=/^[0-9]*$/g;
             if(document.form1.num1.value==""||document.form1.num2.value==""){
                 window.alert("该文本框里面的内容不能为空!!");
                 return false;
             }
-            if(document.form1.flag.value=="/"&&document.form1.num2.value=="0")
+           else if(document.form1.flag.value=="/"&&document.form1.num2.value=="0")
             {
-                window.alert("输入语法有误(0不可以作为被除数)");
+                window.alert( "输入语法有误(0不可以作为被除数)");
                 return false;
             }
-            if(document.form1.num1.value=="\\d"||document.form1.num2.value=="\\d")
+          else  if(document.form1.num1.value.match(a)&&document.form1.num2.value.match(a))
             {
-                window.alert("请输入数字");
+                return true;
+            }
+            else
+            {
+                alert("请检查你输入的数据!")
                 return false;
             }
         }

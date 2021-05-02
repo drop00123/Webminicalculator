@@ -7,10 +7,10 @@
 --%>
 <%@page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
-  <head>
-        <title>Welcome to here</title>
-      </head>
-  <body bgcolor="aqua">
+ <head>
+   <title>Welcome to here</title>
+ </head>
+ <body bgcolor="aqua">
 <font color="black">
 <% Integer hit=
         (Integer)application.getAttribute("hit");
@@ -28,15 +28,15 @@
 
 %><p>当前网页访问量为：<%=hit%></p></font>
     <div align="middle">
-    <form action="calculator" method="post" name=form>
-         <font size="10" style="color:blue">网页计算器登录界面</font><br>
+ <form action="calculator.jsp" method="post">
+   <font size="10" style="color:blue">网页计算器登录界面</font><br>
         <hr>
-         用户名：<input type="text" value=""name="username"><br>
-         密    码：<input type="text"value="" name="password"><br>
-             <a href="calculator.jsp">提交</a>
-         <input type="reset"value="重置">  
-        </form>
+     用户名：<input type="text" value=""name="username"><br>
+     密  码：<input type="text"value="" name="password"><br>
+     <input type="submit" value="提交">
+     <input type="reset"value="重置">
+     </form>
     </div>
-  </body>
+ </body>
 </html>
 
